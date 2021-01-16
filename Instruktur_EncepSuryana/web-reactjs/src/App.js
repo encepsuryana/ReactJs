@@ -1,25 +1,28 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default class b extends React.Component {
+  constructor(props) {
+    super(props);
 
-export default App;
+    this.state = {
+      nama: 'Belajar ReactJs dengan Mudah!'
+    }
+  };
+
+  updateState = () => {
+    this.setState({nama: 'Belajar dulu JavaScript!'});
+  }
+
+  render(){
+    return(
+      <div className='App'>
+        <h1>Belajar Mudah dengan Kita disini!</h1>
+        <h2>{this.state.nama}</h2>
+
+        <button onClick = {this.updateState}>Klik Disini</button>
+      </div>
+    );
+  }
+}

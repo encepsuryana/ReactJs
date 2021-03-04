@@ -18,6 +18,7 @@ export default class b extends React.Component {
   render(){
     return(
       <div className='App'>
+        <image src='../src/logo.svg'></image>
         <h1>Belajar Mudah dengan Kita disini!</h1>
         <h2>{this.state.nama}</h2>
 

@@ -15,6 +15,11 @@ function App() {
             <i className="fas fa-home"></i>
           </span>
         </div>
+        <div className="col-6">         
+          <span>
+            <i className="fas fa-home"></i>
+          </span>
+        </div>
       </div>
     </div>
   );

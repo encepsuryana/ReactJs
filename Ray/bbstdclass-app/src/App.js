@@ -77,7 +77,7 @@ import {
 } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-const Home = () => <h1>Home</h1>;
+const Home = () => <h1>Homes</h1>;
 const About = () => <h1>About</h1>;
 const Links = () => (
 	<div className="list-group">

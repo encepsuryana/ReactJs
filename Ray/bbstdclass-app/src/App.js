@@ -1,4 +1,3 @@
-// test repo
 // import './App.css';
 // import Testing from './component/helloworld';
 // import React, { useState } from 'react';

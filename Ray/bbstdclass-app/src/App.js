@@ -81,15 +81,79 @@ const Home = () => <h1>Home</h1>;
 const About = () => <h1>About</h1>;
 const Links = () => (
 	<div className="list-group">
-		<NavLink className="list-group-item" to="/">
+		<NavLink className="list-group-item" exact activeClassName="active" to="/">
 			Home
 		</NavLink>
 
-		<NavLink className="list-group-item" to="/about">
+		<NavLink className="list-group-item" activeClassName="active" to="/about">
 			About
+		</NavLink>
+
+		<NavLink className="list-group-item" activeClassName="active" to="/content">
+			Blogs
 		</NavLink>
 	</div>
 );
+const Blog = () => (
+	<div className="list-group">
+		<NavLink
+			className="list-group-item"
+			exact
+			activeClassName="active"
+			to="/content/city"
+		>
+			Kota
+		</NavLink>
+
+		<NavLink
+			className="list-group-item"
+			activeClassName="active"
+			to="/content/sports"
+		>
+			Olahraga
+		</NavLink>
+		<Route path="/content/:contentName" component={BlogsDetail} />
+	</div>
+);
+
+const BlogsDetail = (props) => (
+	<div>
+		{props.match.params.contentName}
+		<div>
+			<img
+				src={
+					'http://lorempixel.com/400/200/' +
+					props.match.params.contentName +
+					'/1/'
+				}
+			/>
+		</div>
+		: null
+	</div>
+);
+
+// function Home() {
+// 	return <h1>Home</h1>;
+// }
+
+// function About() {
+// 	return <h1>About</h1>;
+// }
+
+// function Links() {
+// 	return (
+// 		<div>
+// 			<NavLink className="list-group-item" exact activeClassName="active" to="/">
+// 				Home
+// 			</NavLink>
+
+// 			<NavLink className="list-group-item" activeClassName="active" to="/about">
+// 				About
+// 			</NavLink>
+// 		</div>
+// 	);
+// }
+
 export default class App extends Component {
 	render() {
 		return (
@@ -101,9 +165,13 @@ export default class App extends Component {
 					<section className="col-sm-8">
 						<Route exact path="/" component={Home} />
 						<Route path="/about" component={About} />
+						<Route path="/content" component={Blog} />
 					</section>
 				</div>
 			</Router>
 		);
 	}
 }
+
+
+/** Video 3.4 **/ 

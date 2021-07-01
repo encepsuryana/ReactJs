@@ -2,14 +2,9 @@ import React, { Component } from 'react';
 import Product from './Product';
 import { Container, Row } from 'react-bootstrap';
 import Title from './Title';
-import { detailProduct, storeProducts } from '../data';
 import { ProductConsumer } from '../Context';
 
 export default class ProductList extends Component {
-	state = {
-		products: storeProducts,
-		detailProduct: detailProduct,
-	};
 	render() {
 		return (
 			<React.Fragment>
@@ -19,7 +14,9 @@ export default class ProductList extends Component {
 						<Row>
 							<ProductConsumer>
 								{(value) => {
-									console.log(value);
+									return value.products.map((product) => {
+										return <Product key={product.id} product={product} />;
+									});
 								}}
 							</ProductConsumer>
 						</Row>

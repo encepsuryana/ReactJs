@@ -31,10 +31,19 @@ export default function Details() {
 								<p className="text-muted lead">{info}</p>
 								<div>
 									<Link to="/">
-										<ButtonContainer>Back To Product</ButtonContainer>
+										<ButtonContainer className="mr-2">
+											Back To Product
+										</ButtonContainer>
 									</Link>
-									<ButtonContainer>
-										disabled = {inCart ? true : false}
+									<ButtonContainer
+										cart
+										disabled={inCart ? true : false}
+										onClick={() => {
+											value.addToCart(id);
+											value.openmModal(id);
+										}}
+									>
+										{inCart ? 'In Cart' : 'Add To Cart'}
 									</ButtonContainer>
 								</div>
 							</div>

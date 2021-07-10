@@ -6,7 +6,8 @@ import ProductList from './components/ProductList';
 import Details from './components/Details';
 import Cart from './components/Cart';
 import Default from './components/Default';
-import { Route, Switch, NavLink, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 
 function App() {
 	return (

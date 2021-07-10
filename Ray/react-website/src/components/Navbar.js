@@ -1,6 +1,5 @@
 import React from 'react';
-import { Route, Switch, NavLink, Link } from 'react-router-dom';
-import { Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from '../logo.svg';
 import { ButtonContainer } from './Button';
 import styled from 'styled-components';

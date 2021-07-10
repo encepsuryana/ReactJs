@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Route, Switch, NavLink, Link } from 'react-router-dom';
-import { ProductConsumer } from '../Context';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export default class Product extends Component {
 	render() {
@@ -48,6 +48,16 @@ export default class Product extends Component {
 		);
 	}
 }
+
+Product.propTypes = {
+	product: PropTypes.shape({
+		id: PropTypes.number,
+		img: PropTypes.string,
+		title: PropTypes.string,
+		price: PropTypes.number,
+		inCart: PropTypes.bool,
+	}).isRequired,
+};
 
 const ProductWrapper = styled.div`
 	.card {

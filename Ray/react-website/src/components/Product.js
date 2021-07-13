@@ -10,6 +10,7 @@ export default class Product extends Component {
 		return (
 			<ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
 				<div className="card">
+					{/* mengapa harus dibungkus dengan ProductConsumer? ProductConsumer membawa ap? */}
 					<ProductConsumer>
 						{(value) => (
 							<div
@@ -31,6 +32,7 @@ export default class Product extends Component {
 								>
 									{inCart ? (
 										<p className="text-capitalize mb-0" disabled>
+											{/* maksud kode {''} ap ya? */}
 											{''}
 											in cart
 										</p>

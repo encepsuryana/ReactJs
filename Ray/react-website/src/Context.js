@@ -75,6 +75,7 @@ class ProductProvider extends Component {
 					closeModal: this.closeModal,
 				}}
 			>
+				{/* konfirmasi sekali lagi penggunaan props.children */}
 				{this.props.children}
 			</ProductContext.Provider>
 		);
